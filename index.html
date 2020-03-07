@@ -20,17 +20,21 @@
             </p>
         <![endif]-->
         <form>
-            <input type="text" id=searchTxt>
-            <input type="button" value="Click me"  onclick="msg()">
+            <h1><input type="text" id=searchTxt onpaste="msg()" oninput="msg()" onchange="msg()" onkeydown="msg()"></h1>
+            <!-- <input type="button" value="Click me"  onClick="msg()"> -->
         </form>
 
         <script>
          function msg() {
-             var str = document.getElementById("searchTxt").value;
-             var res = str.split("?");
-             var final = res[0] + "?utm_medium=instant-message";
-             var finallink = "<a href = " + final + ">" + final + "</a><br>";
-             document.getElementById("linkarea").innerHTML += finallink;
+             var str = document.getElementById("searchTxt").value.trim();
+             if(str === "") {
+                 document.getElementById("linkarea").innerHTML = "";
+             } else {
+                 var res = str.split("?");
+                 var final = res[0] + "?utm_medium=instant-message";
+                 var finallink = "<a href = " + final + ">" + final + "</a><br>";
+                 document.getElementById("linkarea").innerHTML = finallink;
+             }
          }
         </script>
         <div id="linkarea">
