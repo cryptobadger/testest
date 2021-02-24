@@ -31,7 +31,8 @@
                  document.getElementById("linkarea").innerHTML = "";
              } else {
                  var res = str.split("?");
-                 var final = res[0] + "?utm_medium=instant-message";
+                 var final = res[0] + "?utm_campaign=share&utm_medium=instant-message&utm_medium=referral&utm_source=mail";
+                 
                  var finallink = "<a href = " + final + ">" + final + "</a><br>";
                  document.getElementById("linkarea").innerHTML = finallink;
              }
