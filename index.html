@@ -34,7 +34,8 @@
                  var final = res[0] + "?utm_campaign=share&utm_medium=instant-message&utm_medium=referral&utm_source=mail";
                  
                  var finallink = "<a href = " + final + ">" + final + "</a><br>";
-                 document.getElementById("linkarea").innerHTML = finallink;
+                 document.getElementById("linkarea").innerHTML = finallink + "<br>" + "Redirecting...";
+                 window.location = final
              }
          }
         </script>
